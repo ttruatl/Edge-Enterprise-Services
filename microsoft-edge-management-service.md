@@ -108,54 +108,6 @@ Follow these steps to assign a configuration profile to an Microsoft Entra group
 
 To manage extension settings for a profile, go **Microsoft Edge management**, select the profile you want to work with and then select the **Extensions** pivot. You can configure profile settings that apply to all extensions. Any extensions you add to be managed will appear in the profile. You can add an extension to the allow list, block list, or forced-installed list by setting the installation policy. If you configure specific settings on an individual extension, then those settings will override the profile settings.
 
-#### Import existing extension settings to an existing configuration profile
-
-Follow these steps to import extension settings:
-
-1. Select the profile you want to import extension settings to and go to the **Extensions** pivot.
-1. Select **Import JSON**.
-1. Under **Import JSON**, browse for the JSON file that contains your extension settings and then select **Import**. Importing might overwrite any previous configurations. Note that it may take some time to complete the import if the file is large.
-
-After confirmation, your profile will be populated with the imported settings.
-
-#### Export extension settings to configure the ExtensionSettings policy
-
-Follow these steps to export extension settings:
-
-1. Select the profile you want to export extension settings from and go to the **Extensions** pivot.
-1. Select **Export JSON** and the export will start downloading.
-
-After the download is finished you can apply the JSON as a value to the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) group policy.
-
-#### Manage settings for all extensions
-
-Follow these steps to manage profile settings:
-
-1. Select a profile and go to the **Extensions** pivot.
-1. Select **Manage extensions** to configure any of the settings in the following table.
-
-   | Setting | Description |
-   |:-----|:-----|
-   | Block all extensions | Users can't install any extensions (unless the extension is on the allow list). |
-   | Allowed types of apps and extensions| Specify what types of app or extensions users are allowed to install. |
-   | Install sources| Specify which URLs are allowed to install extensions. For URL pattern examples, see the [Defining match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns). |
-   | External extensions | Allow or block installation of external extensions. |
-   | Message for users when extension is blocked | Set a custom message that displays if users try to install a blocked extension. |
-   | Blocked hosts | Prevent extensions from interacting with or modifying websites that you specify. The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns) except you can't define the path. |
-   | Allowed hosts | Allow extensions to interact with or modify websites, even if they're defined in blocked hosts. The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns) except you can't define the path. |
-   | Block extensions that require these permissions | Prevent users from installing/running extensions that need the permissions you select. |
-
-1. When you're finished configuring extension settings, select **Save**.
-
-#### Add an extension
-
-Follow these steps to add an extension:
-
-1. Select a profile and go to the **Extensions** pivot.
-1. Select **Select extension**.
-1. Under **Select an extension**, select an extension from the **Microsoft Edge Add-ons** store or specify an external extension ID.
-1. Select **Select**.
-
 #### Manage an extension
 
 After selecting an extension, you can configure settings for a specific extension. These settings will only apply to the extension that you select and will override any profile settings.
@@ -210,6 +162,54 @@ Choose how an extension is displayed in the toolbar. Follow these steps to confi
    - Force shown: Always show extension on the toolbar. Users won't be able to hide it from the toolbar.
 
 1. Select **Save**.
+
+#### Import existing extension settings to an existing configuration profile
+
+Follow these steps to import extension settings:
+
+1. Select the profile you want to import extension settings to and go to the **Extensions** pivot.
+1. Select **Import JSON**.
+1. Under **Import JSON**, browse for the JSON file that contains your extension settings and then select **Import**. Importing might overwrite any previous configurations. Note that it may take some time to complete the import if the file is large.
+
+After confirmation, your profile will be populated with the imported settings.
+
+#### Export extension settings to configure the ExtensionSettings policy
+
+Follow these steps to export extension settings:
+
+1. Select the profile you want to export extension settings from and go to the **Extensions** pivot.
+1. Select **Export JSON** and the export will start downloading.
+
+After the download is finished you can apply the JSON as a value to the [ExtensionSettings](/deployedge/microsoft-edge-policies#extensionsettings) group policy.
+
+#### Manage settings for all extensions
+
+Follow these steps to manage profile settings:
+
+1. Select a profile and go to the **Extensions** pivot.
+1. Select **Manage extensions** to configure any of the settings in the following table.
+
+   | Setting | Description |
+   |:-----|:-----|
+   | Block all extensions | Users can't install any extensions (unless the extension is on the allow list). |
+   | Allowed types of apps and extensions| Specify what types of app or extensions users are allowed to install. |
+   | Install sources| Specify which URLs are allowed to install extensions. For URL pattern examples, see the [Defining match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns). |
+   | External extensions | Allow or block installation of external extensions. |
+   | Message for users when extension is blocked | Set a custom message that displays if users try to install a blocked extension. |
+   | Blocked hosts | Prevent extensions from interacting with or modifying websites that you specify. The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns) except you can't define the path. |
+   | Allowed hosts | Allow extensions to interact with or modify websites, even if they're defined in blocked hosts. The host pattern format is similar to [match patterns](/microsoft-edge/extensions-chromium/developer-guide/match-patterns) except you can't define the path. |
+   | Block extensions that require these permissions | Prevent users from installing/running extensions that need the permissions you select. |
+
+1. When you're finished configuring extension settings, select **Save**.
+
+#### Add an extension
+
+Follow these steps to add an extension:
+
+1. Select a profile and go to the **Extensions** pivot.
+1. Select **Select extension**.
+1. Under **Select an extension**, select an extension from the **Microsoft Edge Add-ons** store or specify an external extension ID.
+1. Select **Select**.
 
 ### View extension requests
 
